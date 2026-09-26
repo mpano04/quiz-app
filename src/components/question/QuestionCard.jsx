@@ -4,9 +4,12 @@ import './QuestionCard.css'
 function QuestionCard({question,selectedAnswer,onAnswer}){
 
     return(
-        <div>
-            <h3>Question {question.id}</h3>
-            <p>{question.question}</p>
+        <div className='question-and-answer-options'>
+            <div className='question'>
+                <h4>Question {question.id}</h4>
+                <p>{question.question}</p>
+            </div>
+            
             <label className='answer-options'>
                 {question.options.map((option,index) => (
                     <div className='answer-option' key={index}>
