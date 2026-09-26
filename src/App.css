@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.app {
+    min-height: 100vh;
+    background-color: hsl(210, 40%, 98%);
+}
+.quiz-layout{
+
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+}
+.quiz-content {
+    border: 1px solid hsl(0, 0%, 87%);
+    min-height: 500px;
+}
+.quiz-sidebar{
+    border: 1px solid hsl(0, 0%, 87%);
+    border-radius: 8px;
+    min-height: 500px;
+}
