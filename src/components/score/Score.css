@@ -1,0 +1,23 @@
+
+.score {
+    min-height: 150px;
+    border: 1px solid hsl(0, 0%, 87%);
+    border-radius: 8px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 2px 6px hsla(0, 0%, 0%, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.score h2 {
+    margin: 0 0 10px;
+}
+
+.score p {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
