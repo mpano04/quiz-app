@@ -1,0 +1,153 @@
+const questions = [
+  {
+    id: 1,
+    question:
+      "You are creating the basic structure of a web page with headings, paragraphs, images, and links. Which technology is mainly responsible for this?",
+    options: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React"
+    ],
+    correctAnswer: "HTML",
+    explanation:
+      "Think about the technology that describes the structure and meaning of content before styling or interactivity is added."
+  },
+
+  {
+    id: 2,
+    question:
+      "A web page already has its content and structure, but you want to change its colors, spacing, fonts, and layout. Which technology should you mainly use?",
+    options: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Node.js"
+    ],
+    correctAnswer: "CSS",
+    explanation:
+      "Think about which technology controls how existing web page elements are presented visually."
+  },
+
+  {
+    id: 3,
+    question:
+      "A button should display a message whenever a user clicks it. Which technology would normally handle this behavior in the browser?",
+    options: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "SQL"
+    ],
+    correctAnswer: "JavaScript",
+    explanation:
+      "The page already has structure and styling. Think about which technology handles user actions and dynamic behavior."
+  },
+
+  {
+    id: 4,
+    question:
+      "Which statement best describes React?",
+    options: [
+      "A JavaScript library for building user interfaces",
+      "A JavaScript runtime for executing server-side applications",
+      "A framework mainly used for managing relational databases",
+      "A compiler that converts JavaScript directly into machine code"
+    ],
+    correctAnswer: "A JavaScript library for building user interfaces",
+    explanation:
+      "Think about which part of an application React mainly helps developers organize into reusable components."
+  },
+
+  {
+    id: 5,
+    question:
+      "A parent component has a username that a child component needs to display. What is the normal React approach for sending that value to the child?",
+    options: [
+      "Pass the username through props",
+      "Create another useState inside the child",
+      "Modify the DOM directly from the parent",
+      "Store the username inside the child's CSS"
+    ],
+    correctAnswer: "Pass the username through props",
+    explanation:
+      "Think about React's normal one-way data flow and how information travels from a parent component to a child component."
+  },
+
+  {
+    id: 6,
+    question:
+      "A counter component must remember its current number, and the screen should update whenever that number changes. Which React Hook is the most appropriate?",
+    options: [
+      "useState",
+      "useEffect",
+      "useRef",
+      "useContext"
+    ],
+    correctAnswer: "useState",
+    explanation:
+      "The value changes over time and the UI must respond to that change. Think about which Hook is designed for this type of component data."
+  },
+
+  {
+    id: 7,
+    question:
+      "You have an array of products and want React to create one ProductCard for every product. Which array method is most suitable?",
+    options: [
+      "map()",
+      "filter()",
+      "find()",
+      "reduce()"
+    ],
+    correctAnswer: "map()",
+    explanation:
+      "You are not trying to remove items or find only one item. You need to transform every array item into something React can render."
+  },
+
+  {
+    id: 8,
+    question:
+      "Why should elements created from an array in React have a unique key?",
+    options: [
+      "To help React identify items when the list changes",
+      "To allow the elements to receive props",
+      "To make the elements accessible from CSS",
+      "To prevent the component from re-rendering"
+    ],
+    correctAnswer: "To help React identify items when the list changes",
+    explanation:
+      "Imagine that an item is added, removed, or reordered. React needs a reliable way to know which rendered item corresponds to which piece of data."
+  },
+
+  {
+    id: 9,
+    question:
+      "A component displays a value from state. The state is updated using its setter function. What should React normally do next?",
+    options: [
+      "Re-render the component using the updated state",
+      "Reload the entire web page",
+      "Directly rewrite the HTML file",
+      "Reset the component state to its initial value"
+    ],
+    correctAnswer: "Re-render the component using the updated state",
+    explanation:
+      "Think about React's declarative model: developers update data, and React takes responsibility for reflecting that new data in the interface."
+  },
+
+  {
+    id: 10,
+    question:
+      "You want a function called handleSubmit to run only when a user clicks a button. Which JSX is appropriate?",
+    options: [
+      "<button onClick={handleSubmit}>Submit</button>",
+      "<button onChange={handleSubmit}>Submit</button>",
+      "<button onClick={handleSubmit()}>Submit</button>",
+      "<button onSubmit={handleSubmit}>Submit</button>"
+    ],
+    correctAnswer: "<button onClick={handleSubmit}>Submit</button>",
+    explanation:
+      "Think about two things: which event represents a mouse click, and whether the function should be passed to React or executed immediately during rendering."
+  }
+];
+
+export default questions;
