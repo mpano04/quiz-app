@@ -52,6 +52,28 @@ body {
     background-color: hsl(0, 0%, 100%);
 }
 
+
+.navigation-area{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+.navigation-area button{
+    width: 6rem;
+    height: 2rem;
+    font-family: Arial, sans-serif;
+
+    border: none;
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 1px 3px 6px hsla(0, 0%, 0%, 0.4);
+    cursor: pointer;
+}
+
+
+
 @media (max-width: 768px) {
     .quiz-layout {
         width: 90%;
