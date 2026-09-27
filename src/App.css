@@ -39,6 +39,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 6px hsla(0, 0%, 0%, 0.1);
     background-color: hsl(0, 0%, 100%);
+    padding-left: 30px;
 }
 
 

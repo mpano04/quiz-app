@@ -24,6 +24,7 @@ function QuestionCard({question,selectedAnswer,onAnswer}){
                     </div>
                 ))}
             </label>
+
         </div>
     );
 }

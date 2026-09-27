@@ -52,9 +52,13 @@ function App() {
              <button onClick={handleNext}> Next </button>
           </div>
 
-          <div className='explanation-area'>
-            Explanations
-          </div>
+         <div className='explanation-area'>
+           <h4>Explanation</h4>
+
+             {answers[currentQuestionData.id] && (
+              <p>{currentQuestionData.explanation}</p>
+             )}
+        </div>
         </section>
 
         <aside className='quiz-sidebar'>
