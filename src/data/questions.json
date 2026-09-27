@@ -135,7 +135,60 @@
     "id": 12,
     "question": "What is JSX in React?",
     "options":[
-      "A syntax extension that lets you write HTML-like markup in JavaScript"
-    ]
+      "A syntax extension that lets you write HTML-like markup in JavaScript",
+      "A separate programming language used only for databases",
+      "A CSS framework for styling React components",
+      "A JavaScript runtime used to execute React on a server"
+    ],
+    "correctAnswer": "A syntax extension that lets you write HTML--like markup in JavaScript",
+    "explanation": "Think about the syntax commonly used inside React components to describe what the user interface should look like."
+  },
+  {
+    "id":13,
+    "question": "Which syntax is used to embed a JavaScript expression inside JSX?",
+    "options":[
+      "Curly braces {}",
+      "Square brackets []",
+      "Parantheses ()",
+      "Angle brackets <>"
+    ],
+    "correctAnswer": "Curly braces {}",
+    "explanation": "In JSX, curly braces allow you to insert JavaScript expressions into the markup."
+  },
+  {
+    "id": 14,
+    "question":"A React component needs to store whether a menu is currently open or closed. Which state value is most appropriate?",
+    "options":[
+      "A boolean such as true or false",
+      "An HTML element",
+      "A CSS selector",
+      "A database table"
+    ],
+    "correctAnswer": "A boolean such as true or false",
+    "explanation": "A value with two possible states, such as open or closed, is naturally represented using a boolean."
+  },
+  {
+    "id":15,
+    "question": "Which syntax correctly passes a string prop name title to a React componenr?",
+    "options":[
+      "<Card title=\"Welcome\" />",
+      "<Card title:=\"Welcome\" />",
+      "<Card title- >Welcome</Card>",
+      "<Card prop-title=\"Welcome\" />"
+    ],
+    "correctAnswer": "<Card title=\"Welcome\" />",
+    "explanation" : "React props can be passed to components using HTML-like attribute syntax."
+  },
+  {
+    "id":16,
+    "question": "Which React Hook is commonly used to access a DOM element without triggering a component re-render when its value changes?",
+    "options": [
+      "useRef",
+      "useState",
+      "useEffect",
+      "useContext"
+    ],
+    "correctAnswer": "useRef",
+    "explanation": "useRef can hold a multiple value or reference a DOM element without triggering a compinent re-render when the ref changes."
   }
 ]
