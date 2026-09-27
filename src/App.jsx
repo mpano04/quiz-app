@@ -11,6 +11,7 @@ function App() {
     const [answers, setAnswers] = useState({});
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [submitted, setSubmitted] = useState(false);
+    const [showSubmitPage, setShowSubmitPage] = useState(false);
 
     const currentQuestionData = questions[currentQuestion];
 
@@ -25,6 +26,15 @@ function App() {
         if (currentQuestion < questions.length - 1) {
             setCurrentQuestion(previousQuestion => previousQuestion + 1);
         }
+          
+         else {
+            if (Object.keys(answers).length === questions.length) {
+             setShowSubmitPage(true);
+        } else {
+            alert("Please answer all questions before submitting.");
+        }
+       
+    }
     }
 
     function handlePrevious() {
@@ -34,11 +44,7 @@ function App() {
     }
 
     function handleSubmit() {
-        if (Object.keys(answers).length === questions.length) {
-            setSubmitted(true);
-        } else {
-            alert("Please answer all questions before submitting.");
-        }
+          setSubmitted(true);
     }
 
     return (
@@ -48,35 +54,57 @@ function App() {
             <div className='quiz-layout'>
 
                 <section className='quiz-content'>
+       
+       
+    {showSubmitPage ? (
 
-                    <div className='question-area'>
-                        <QuestionCard
-                            question={currentQuestionData}
-                            selectedAnswer={answers[currentQuestionData.id]}
-                            onAnswer={handleAnswer}
+        <div className="submit-page">
+            <h2>Ready to submit?</h2>
+
+            <button onClick={handleSubmit}>
+                Submit
+            </button>
+             {submitted && (
+                        <Score
+                            questions={questions}
+                            answers={answers}
                         />
-                    </div>
+                    )} 
+        </div>
+   
+    ) : (
 
-                    <div className='navigation-area'>
-                        <button onClick={handlePrevious}>
-                            Previous
-                        </button>
+        <>
+            <div className='question-area'>
+                <QuestionCard
+                    question={currentQuestionData}
+                    selectedAnswer={answers[currentQuestionData.id]}
+                    onAnswer={handleAnswer}
+                />
+            </div>
 
-                        <button onClick={handleNext}>
-                            Next
-                        </button>
+            <div className='navigation-area'>
+                <button onClick={handlePrevious}>
+                    Previous
+                </button>
 
-                        <button onClick={handleSubmit}>
-                            Submit
-                        </button>
-                    </div>
+                <button onClick={handleNext}>
+                    Next
+                </button>
+            </div>
 
-                    <div className='explanation-area'>
-                        <h4>Explanation</h4>
-                        <p>{currentQuestionData.explanation}</p>
-                    </div>
+            <div className='explanation-area'>
+                <h4>Explanation</h4>
 
-                </section>
+                {answers[currentQuestionData.id] && (
+                    <p>{currentQuestionData.explanation}</p>
+                )}
+            </div>
+        </>
+
+    )}
+
+</section>
 
                 <aside className='quiz-sidebar'>
 
@@ -97,12 +125,7 @@ function App() {
                         onQuestionSelect={setCurrentQuestion}
                     />
 
-                    {submitted && (
-                        <Score
-                            questions={questions}
-                            answers={answers}
-                        />
-                    )}
+                    
 
                 </aside>
 
