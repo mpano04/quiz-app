@@ -3,6 +3,7 @@ import './App.css'
 import Header from './components/header/Header.jsx';
 import QuestionCard from './components/question/QuestionCard.jsx';
 import Score from './components/score/Score.jsx';
+import QuestionNavigation from './components/questionNavigation/QuestionNavigation.jsx';
 import questions from './data/questions.js';
 import React, { useState } from 'react';
 
@@ -11,7 +12,6 @@ function App() {
 	const [answers, setAnswers] = useState({});
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [submitted, setSubmitted] = useState(false);
-
 	const currentQuestionData = questions[currentQuestion];
 
 	function handleAnswer(questionId, answer) {
@@ -34,6 +34,13 @@ function App() {
 		}
 	}
 
+	function handleSubmit() {
+    if (Object.keys(answers).length === questions.length) {
+        setSubmitted(true);
+    } else {
+        alert("Please answer all questions before submitting.");
+    }
+}
 
 
 	return (
@@ -52,7 +59,7 @@ function App() {
 					<div className='navigation-area'>
 						<button onClick={handlePrevious}> Previous </button>
 						<button onClick={handleNext}> Next </button>
-						<button onClick={() => setSubmitted(true)}>Submit</button>
+						<button onClick={handleSubmit}>Submit</button>
 					</div>
 
 					<div className='explanation-area'>
@@ -61,11 +68,16 @@ function App() {
 				</section>
 
 				<aside className='quiz-sidebar'>
+					<QuestionNavigation
+						questions={questions}
+						answers={answers}
+						currentQuestion={currentQuestion}
+						onQuestionSelect={setCurrentQuestion}
+					/>
+					{submitted && (<Score questions={questions} answers={answers} />)}
 
 				</aside>
-				<>
-					{submitted && (<Score questions={questions} answers={answers} />)}
-				</>
+
 			</div>
 		</div>
 	);
