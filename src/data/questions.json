@@ -91,7 +91,7 @@
 
   {
     "id": 7,
-   " question":
+   "question":
       "You have an array of products and want React to create one ProductCard for every product. Which array method is most suitable?",
     "options": [
       "map()",
@@ -106,7 +106,7 @@
 
   {
     "id": 8,
-   " question":
+   "question":
       "Why should elements created from an array in React have a unique key?",
     "options": [
       "To help React identify items when the list changes",
@@ -136,7 +136,7 @@
 
   {
     "id": 10,
-   " question":
+   "question":
       "You want a function called handleSubmit to run only when a user clicks a button. Which JSX is appropriate?",
     "options": [
       "<button onClick={handleSubmit}>Submit</button>",
