@@ -1,7 +1,7 @@
 
 import './QuestionNavigation.css';
 
-function QuestionNavigation({ questions, answers, currentQuestion, onQuestionSelect }) {
+function QuestionNavigation({ questions, answers, currentQuestion, onQuestionSelect, submitted}) {
 
 	return (
 		<div className="question-navigation">
@@ -15,8 +15,16 @@ function QuestionNavigation({ questions, answers, currentQuestion, onQuestionSel
 						key={question.id}
 						onClick={() => onQuestionSelect(index)}
 						className={
-							currentQuestion === index ? "current": answers[question.id] ? "answered": "unanswered"
-						}
+    submitted && answers[question.id] !== question.correctAnswer
+        ? "wrong"
+        : currentQuestion === index
+            ? "current"
+            : answers[question.id]
+                ? "answered"
+                : "unanswered"
+}
+
+						
 					>
 						{question.id}
 					</button>

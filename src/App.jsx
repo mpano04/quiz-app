@@ -120,6 +120,7 @@ function App() {
                         answers={answers}
                         currentQuestion={currentQuestion}
                         onQuestionSelect={setCurrentQuestion}
+                        submitted ={submitted}
                     />
 
                     

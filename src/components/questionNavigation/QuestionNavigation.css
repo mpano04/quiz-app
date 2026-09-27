@@ -34,3 +34,7 @@
     background-color: hsl(210, 80%, 60%);
     color: white;
 }
+.question-numbers button.wrong{
+    background-color: red;
+    color: white;
+}
