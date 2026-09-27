@@ -202,5 +202,20 @@
     ],
     "correctAnswer": "React schedules a re-render so the UI can reflect the new state",
     "explanation": "React uses state changes to determine when a component needs to render again with updated data."
+  },
+  {
+    "id":18,
+    "question": "Which of the following is the correct way to conditionally render a message when isLoggedIn is true?",
+    "options":[
+      "{isLoggedIn &&  <p>Welcome!</p>}",
+      "{isLoggedIn => <p>Welcome!</p>}",
+      "{if isLoggedIn <p>Welcome!</p>}",
+      "{isLoggedIn ? <p>Welcome!</p> : break}"
+    ],
+    "correctAnswer": "{isLoggedIn && <p>Welcome!</p>}",
+    "explanation": "The logical AND operator is commonly used in JSX when an element should only appear when a condition is true."
+  },
+  {
+    
   }
 ]
