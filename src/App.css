@@ -9,6 +9,47 @@ body {
     min-height: 100vh;
     background-color: hsl(210, 40%, 98%);
 }
+.submit-page {
+    min-height: 450px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.submit-page h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+    color: green;
+}
+
+
+
+
+.submit-page button {
+    padding: 13px 32px;
+    border: none;
+    border-radius: 8px;
+    background-color: grey;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.submit-page button:hover {
+    background-color:green;
+    transform: translateY(-2px);
+}
+
+.submit-page button:active {
+    transform: translateY(0);
+}
 .quiz-layout{
     width: 90%;
     max-width: 1200px;
