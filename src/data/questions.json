@@ -216,6 +216,15 @@
     "explanation": "The logical AND operator is commonly used in JSX when an element should only appear when a condition is true."
   },
   {
-    
+    "id":19,
+    "question": "A form input should have its value controlled by React state. Which approach is commonly used?",
+    "options":[
+      "Store the value only in a CSS class",
+      "Set the input's value from state and update that state with on'change",
+      "Modify the HTML file whenever the user types",
+      "Use map() to control the input value"
+    ],
+    "correctAnswer": "Set the input's value from state and update that state with onChange",
+    "explanation": "A controlled input gets its current value from React state, while an event handler upates the state when the user types."
   }
 ]
