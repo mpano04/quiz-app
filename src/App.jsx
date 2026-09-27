@@ -93,12 +93,9 @@ function App() {
                 </button>
             </div>
 
-            <div className='explanation-area'>
-                <h4>Explanation</h4>
-
-                {answers[currentQuestionData.id] && (
-                    <p>{currentQuestionData.explanation}</p>
-                )}
+           <div className='explanation-area'>
+              <h4>Explanation</h4>
+              <p>{currentQuestionData.explanation}</p>
             </div>
         </>
 
