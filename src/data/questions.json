@@ -183,9 +183,9 @@
     "id":16,
     "question": "Which React Hook is commonly used to access a DOM element without triggering a component re-render when its value changes?",
     "options": [
-      "useRef",
       "useState",
       "useEffect",
+      "useRef",
       "useContext"
     ],
     "correctAnswer": "useRef",
@@ -226,5 +226,17 @@
     ],
     "correctAnswer": "Set the input's value from state and update that state with onChange",
     "explanation": "A controlled input gets its current value from React state, while an event handler upates the state when the user types."
+  },
+  {
+    "id": 20,
+    "question": "Why are React components often split into smaller reusable components?",
+    "options":[
+      "To prevent JavaScript from running in the browser",
+      "To replace CSS completely",
+      "To make every component depend on global variables",
+      "To make the UI easier to organize, reuse, and maintain"
+    ],
+    "correctAnswer": "To make the UI easier to organize, reuse, and maintain",
+    "explanation": "Breaking a user interface into focused components can make code easier to understand, reuse, test, and maintain."
   }
 ]
