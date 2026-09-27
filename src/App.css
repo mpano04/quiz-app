@@ -26,7 +26,6 @@ body {
 
 .quiz-content{
     min-height: 500px;
-
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -64,9 +63,12 @@ body {
 
 @media (max-width: 768px) {
     .quiz-layout {
-        width: 90%;
+		margin: 50px 60px;
+        width: 80%;
+		height: auto;
         grid-template-columns: 1fr;
         gap: 20px;
+		font-size: 14px;
     }
 
     .quiz-content {
