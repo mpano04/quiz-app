@@ -83,6 +83,16 @@ function App() {
 
                 <aside className='quiz-sidebar'>
 
+                    <div className="sidebar-top">
+                        <div className="qtn-progress">
+                           Question {currentQuestion + 1}/{questions.length}
+                        </div>
+
+                        <div className="need-help">
+                           Need Help?
+                        </div>
+                    </div>
+
                     <QuestionNavigation
                         questions={questions}
                         answers={answers}
