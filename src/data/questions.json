@@ -190,5 +190,17 @@
     ],
     "correctAnswer": "useRef",
     "explanation": "useRef can hold a multiple value or reference a DOM element without triggering a compinent re-render when the ref changes."
+  },
+  {
+    "id":17,
+    "question": "What happens when a React component's state changes?",
+    "options":[
+      "React schedules a re-render so the UI can reflect the new state",
+      "The browser automatically closes the application",
+      "React permanently changes the original JavaScript source file",
+      "The component is always removed from the DOM"
+    ],
+    "correctAnswer": "React schedules a re-render so the UI can reflect the new state",
+    "explanation": "React uses state changes to determine when a component needs to render again with updated data."
   }
 ]
