@@ -140,3 +140,13 @@ body {
         gap: 1.5rem;
     }
 }
+
+.need-help{
+    position: relative;
+}
+.need-help button{
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+}

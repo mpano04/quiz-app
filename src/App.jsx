@@ -12,6 +12,7 @@ function App() {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [submitted, setSubmitted] = useState(false);
     const [showSubmitPage, setShowSubmitPage] = useState(false);
+    const [showHelp, setShowHelp] =useState(false);
 
     const currentQuestionData = questions[currentQuestion];
 
@@ -111,7 +112,16 @@ function App() {
                         </div>
 
                         <div className="need-help">
-                            Need Help?
+                            <button onClick={() => setShowHelp(!showHelp)}>
+                                Need Help?
+                            </button>
+                            {showHelp &&(
+                                <div>
+                                    <h4>How to use the quiz</h4>
+                                    <p>Select an answer for each question, then click Next to continue or click next number button</p>
+                                    <p>Answer all questions before submitting the quiz</p>
+                                </div>
+                            )}
                         </div>
                     </div>
 
