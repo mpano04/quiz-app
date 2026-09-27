@@ -3,7 +3,7 @@ import Header from './components/header/Header.jsx';
 import QuestionCard from './components/question/QuestionCard.jsx';
 import Score from './components/score/Score.jsx';
 import QuestionNavigation from './components/questionNavigation/QuestionNavigation.jsx';
-import questions from './data/questions.js';
+import questions from './data/questions.json';
 import React, { useState } from 'react';
 
 function App() {
