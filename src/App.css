@@ -113,13 +113,19 @@ body {
     margin: 5px;
     font-size: 14px;
     font-weight: 500;
-    color: #222;
+    color: #181717;
 }
 
 .need-help{
+    position: relative;
+}
+.need-help button{
+    background: none;
+    border: none;
     font-size: 14px;
-    font-weight: 500;
-    color: #222;
+    font-weight: 200;
+    font-size: 14px;
+    color: #181717;
     cursor: pointer;
     margin-right: 5px;
 }
@@ -141,12 +147,3 @@ body {
     }
 }
 
-.need-help{
-    position: relative;
-}
-.need-help button{
-    background: none;
-    border: none;
-    font-size: 16px;
-    font-weight: 600;
-}
