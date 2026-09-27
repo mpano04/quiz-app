@@ -73,10 +73,7 @@ function App() {
 
                     <div className='explanation-area'>
                         <h4>Explanation</h4>
-
-                        {answers[currentQuestionData.id] && (
-                            <p>{currentQuestionData.explanation}</p>
-                        )}
+                        <p>{currentQuestionData.explanation}</p>
                     </div>
 
                 </section>
@@ -85,11 +82,11 @@ function App() {
 
                     <div className="sidebar-top">
                         <div className="qtn-progress">
-                           Question {currentQuestion + 1}/{questions.length}
+                            Question {currentQuestion + 1}/{questions.length}
                         </div>
 
                         <div className="need-help">
-                           Need Help?
+                            Need Help?
                         </div>
                     </div>
 
