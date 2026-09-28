@@ -1,14 +1,14 @@
 
 .score {
-	background-color: rgb(247, 246, 246);
 	margin: 15px;
 	padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-	color: green;
-	box-shadow: 5px 5px 10px rgb(235, 234, 234);
+    box-shadow: 0 2px 6px hsla(0, 0%, 0%, 0.1);
+    background-color: hsl(0, 0%, 100%);
+	
 }
 
 .score h2 {

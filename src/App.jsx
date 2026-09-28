@@ -55,54 +55,24 @@ function App() {
             <div className='quiz-layout'>
 
                 <section className='quiz-content'>
-       
-       
-    {showSubmitPage ? (
-
-        <div className="submit-page">
-            <h2>Ready to submit?</h2>
-
-            <button onClick={handleSubmit}>
-                Submit
-            </button>
-             {submitted && (
-                        <Score
-                            questions={questions}
-                            answers={answers}
+                    <div className='question-area'>
+                        <QuestionCard
+                             question={currentQuestionData}
+                             selectedAnswer={answers[currentQuestionData.id]}
+                             onAnswer={handleAnswer}
                         />
-                    )} 
-        </div>
-   
-    ) : (
+                    </div>
 
-        <>
-            <div className='question-area'>
-                <QuestionCard
-                    question={currentQuestionData}
-                    selectedAnswer={answers[currentQuestionData.id]}
-                    onAnswer={handleAnswer}
-                />
-            </div>
+                    <div className='navigation-area'>
+                        <button onClick={handlePrevious}>Previous</button>
+                        <button onClick={handleNext}>Next</button>
+                    </div>
 
-            <div className='navigation-area'>
-                <button onClick={handlePrevious}>
-                    Previous
-                </button>
-
-                <button onClick={handleNext}>
-                    Next
-                </button>
-            </div>
-
-           <div className='explanation-area'>
-              <h4>Explanation</h4>
-              <p>{currentQuestionData.explanation}</p>
-            </div>
-        </>
-
-    )}
-
-</section>
+                    <div className='explanation-area'>
+                        <h4>Explanation</h4>
+                        <p>{currentQuestionData.explanation}</p>
+                    </div>
+                </section>
 
                 <aside className='quiz-sidebar'>
 
@@ -131,13 +101,38 @@ function App() {
                         currentQuestion={currentQuestion}
                         onQuestionSelect={setCurrentQuestion}
                         submitted ={submitted}
-                    />
-
-                    
+                    /> 
 
                 </aside>
 
             </div>
+
+
+            {showSubmitPage && (
+                <div className="submit-overlay">
+                    <div className="submit-modal">
+                        {!submitted ? (
+                            <>
+                                <h2>Ready to submit?</h2>
+                                <p>If you're ready, click Submit. <br />If not, click Cancel to return <br />to the questions.</p>
+
+                                <div className="submit-actions">
+                                    <button onClick={() => setShowSubmitPage(false)}> Cancel </button>
+                                    <button onClick={handleSubmit}> Submit </button>  
+                                </div>
+                            </>
+                        ) : (
+                            <>
+                                <Score questions={questions} answers={answers} />
+                                <button className="close-score-btn" onClick={() => setShowSubmitPage(false)} > Close </button>     
+                            </> 
+
+                        )}
+                    </div>
+                </div>
+
+            )}
+
         </div>
     );
 }
