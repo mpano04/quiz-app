@@ -46,8 +46,8 @@ function App() {
 
     function handleSubmit() {
           setSubmitted(true);
-    }
-
+    }    
+ 
     return (
         <div className='app'>
             <Header />
@@ -57,21 +57,23 @@ function App() {
                 <section className='quiz-content'>
        
        
-    {showSubmitPage ? (
+   {showSubmitPage ? (
+    <div className="submit-page">
+        <h2>Ready to submit?</h2>
 
-        <div className="submit-page">
-            <h2>Ready to submit?</h2>
-
+        {!submitted && (
             <button onClick={handleSubmit}>
                 Submit
             </button>
-             {submitted && (
-                        <Score
-                            questions={questions}
-                            answers={answers}
-                        />
-                    )} 
-        </div>
+        )}
+
+        {submitted && (
+            <Score
+                questions={questions}
+                answers={answers}
+            />
+        )}
+    </div>
    
     ) : (
 
